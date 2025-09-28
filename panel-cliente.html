@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del Cliente - Chasky-Peru</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header del Panel -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🚚</span>
+                <h1><span>Chasky</span>-Peru</h1>
+            </div>
+            <div class="user-panel">
+                <div class="user-info">
+                    <div class="user-avatar" id="client-avatar">C</div>
+                    <div class="user-details">
+                        <span id="client-name">Cliente</span>
+                        <span id="client-business">Negocio</span>
+                    </div>
+                </div>
+                <a href="index.html" class="btn btn-danger">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Panel Principal -->
+    <main class="panel-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="#dashboard" class="nav-link active">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#mis-pedidos" class="nav-link">
+                            <i class="fas fa-box"></i>
+                            <span>Mis Pedidos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#nuevo-pedido" class="nav-link">
+                            <i class="fas fa-plus-circle"></i>
+                            <span>Nuevo Pedido</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#seguimiento" class="nav-link">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Seguimiento</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#inventario" class="nav-link">
+                            <i class="fas fa-warehouse"></i>
+                            <span>Inventario</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#facturacion" class="nav-link">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <span>Facturación</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#perfil" class="nav-link">
+                            <i class="fas fa-user-cog"></i>
+                            <span>Mi Perfil</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <section class="main-content">
+            <!-- Dashboard -->
+            <div id="dashboard" class="tab-content active">
+                <div class="content-header">
+                    <h2>Dashboard</h2>
+                    <p>Bienvenido a tu panel de control</p>
+                </div>
+
+                <!-- Estadísticas Rápidas -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>15</h3>
+                            <p>Pedidos Activos</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>8</h3>
+                            <p>En Camino</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>47</h3>
+                            <p>Entregados</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>2</h3>
+                            <p>Pendientes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pedidos Recientes -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Pedidos Recientes</h3>
+                        <a href="#mis-pedidos" class="btn btn-small">Ver Todos</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID Pedido</th>
+                                    <th>Fecha</th>
+                                    <th>Destinatario</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#CH-2023-015</td>
+                                    <td>20/11/2023</td>
+                                    <td>María López</td>
+                                    <td><span class="status-badge status-shipped">En Camino</span></td>
+                                    <td>
+                                        <button class="btn btn-small btn-success">
+                                            <i class="fas fa-eye"></i> Ver
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#CH-2023-014</td>
+                                    <td>19/11/2023</td>
+                                    <td>Carlos Ruiz</td>
+                                    <td><span class="status-badge status-processing">Procesando</span></td>
+                                    <td>
+                                        <button class="btn btn-small btn-success">
+                                            <i class="fas fa-eye"></i> Ver
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#CH-2023-013</td>
+                                    <td>18/11/2023</td>
+                                    <td>Ana García</td>
+                                    <td><span class="status-badge status-delivered">Entregado</span></td>
+                                    <td>
+                                        <button class="btn btn-small btn-success">
+                                            <i class="fas fa-eye"></i> Ver
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mis Pedidos -->
+            <div id="mis-pedidos" class="tab-content">
+                <div class="content-header">
+                    <h2>Mis Pedidos</h2>
+                    <p>Gestiona todos tus pedidos en un solo lugar</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Lista de Pedidos</h3>
+                        <div class="filters">
+                            <select class="filter-select">
+                                <option value="">Todos los estados</option>
+                                <option value="pending">Pendiente</option>
+                                <option value="processing">Procesando</option>
+                                <option value="shipped">En camino</option>
+                                <option value="delivered">Entregado</option>
+                            </select>
+                            <input type="text" placeholder="Buscar pedido..." class="search-input">
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID Pedido</th>
+                                    <th>Fecha</th>
+                                    <th>Productos</th>
+                                    <th>Destino</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#CH-2023-015</td>
+                                    <td>20/11/2023</td>
+                                    <td>2 Camisetas estampadas</td>
+                                    <td>Lima - Miraflores</td>
+                                    <td><span class="status-badge status-shipped">En Camino</span></td>
+                                    <td>
+                                        <button class="btn btn-small btn-success">
+                                            <i class="fas fa-eye"></i> Detalles
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#CH-2023-014</td>
+                                    <td>19/11/2023</td>
+                                    <td>1 Par de zapatos</td>
+                                    <td>Lima - Surco</td>
+                                    <td><span class="status-badge status-processing">Procesando</span></td>
+                                    <td>
+                                        <button class="btn btn-small btn-success">
+                                            <i class="fas fa-eye"></i> Detalles
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#CH-2023-013</td>
+                                    <td>18/11/2023</td>
+                                    <td>3 Accesorios celular</td>
+                                    <td>Lima - San Isidro</td>
+                                    <td><span class="status-badge status-delivered">Entregado</span></td>
+                                    <td>
+                                        <button class="btn btn-small btn-success">
+                                            <i class="fas fa-eye"></i> Detalles
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nuevo Pedido -->
+            <div id="nuevo-pedido" class="tab-content">
+                <div class="content-header">
+                    <h2>Nuevo Pedido</h2>
+                    <p>Solicita un nuevo servicio de logística</p>
+                </div>
+
+                <div class="card">
+                    <form id="nuevo-pedido-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tipo-servicio">Tipo de Servicio</label>
+                                <select id="tipo-servicio" required>
+                                    <option value="">Seleccionar servicio</option>
+                                    <option value="recojo">Recojo y Entrega</option>
+                                    <option value="almacen">Almacenamiento</option>
+                                    <option value="express">Entrega Express</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="fecha-recojo">Fecha de Recojo</label>
+                                <input type="date" id="fecha-recojo" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productos">Descripción de Productos</label>
+                            <textarea id="productos" rows="3" placeholder="Describe detalladamente los productos..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="direccion-recojo">Dirección de Recojo</label>
+                            <textarea id="direccion-recojo" rows="2" placeholder="Dirección donde recogeremos los productos..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="direccion-entrega">Dirección de Entrega</label>
+                            <textarea id="direccion-entrega" rows="2" placeholder="Dirección donde entregaremos los productos..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="instrucciones">Instrucciones Especiales</label>
+                            <textarea id="instrucciones" rows="2" placeholder="Instrucciones adicionales para la entrega..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-peru">
+                            <i class="fas fa-paper-plane"></i> Solicitar Pedido
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Seguimiento -->
+            <div id="seguimiento" class="tab-content">
+                <div class="content-header">
+                    <h2>Seguimiento de Pedidos</h2>
+                    <p>Rastrea tus pedidos en tiempo real</p>
+                </div>
+
+                <div class="card">
+                    <div class="tracking-search">
+                        <input type="text" placeholder="Ingresa el ID de tu pedido..." id="tracking-id">
+                        <button class="btn btn-peru" id="track-btn">
+                            <i class="fas fa-search"></i> Rastrear
+                        </button>
+                    </div>
+
+                    <div class="tracking-result" id="tracking-result">
+                        <div class="tracking-info">
+                            <h4>Pedido #CH-2023-015</h4>
+                            <div class="tracking-steps">
+                                <div class="tracking-step completed">
+                                    <div class="step-marker"></div>
+                                    <div class="step-info">
+                                        <h5>Pedido Recibido</h5>
+                                        <p>20/11/2023 - 09:30 AM</p>
+                                    </div>
+                                </div>
+                                <div class="tracking-step completed">
+                                    <div class="step-marker"></div>
+                                    <div class="step-info">
+                                        <h5>En Proceso</h5>
+                                        <p>20/11/2023 - 10:15 AM</p>
+                                    </div>
+                                </div>
+                                <div class="tracking-step active">
+                                    <div class="step-marker"></div>
+                                    <div class="step-info">
+                                        <h5>En Camino</h5>
+                                        <p>20/11/2023 - 02:30 PM</p>
+                                        <p class="step-detail">Repartidor: Juan Pérez - Contacto: 999 888 777</p>
+                                    </div>
+                                </div>
+                                <div class="tracking-step">
+                                    <div class="step-marker"></div>
+                                    <div class="step-info">
+                                        <h5>Entregado</h5>
+                                        <p>Estimado: 20/11/2023 - 05:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
